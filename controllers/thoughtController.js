@@ -61,7 +61,7 @@ module.exports={
     },
 
     deleteThoughtById(req,res){
-        Thought.findOneAndDelete({_id: req.params.thoughtId}, {thoughtText: req.body.thoughtText})
+        Thought.findOneAndDelete({_id: req.params._id}, {username: req.body.username})
             .then((thought) => {
                 return User.findOneAndUpdate(
                     {username: req.body.username},

@@ -21,21 +21,13 @@ This social media api was built as an excercies in mongodb with the mongoose odm
 
 To install this project, clone the repo, and open it in vscode. Once there run the command \"npm i" to install required dependencies.
 
+A working instance of a mongodb server is also needed, please see documentation [here](https://www.mongodb.com/docs/manual/tutorial/getting-started/)
+
 ## Usage
 
 Once you've installed the project, run the command \"node server.js\". API routes can now be tested in applications such as insomnia or postman.
 
-n/a
-
-## Credits
-
-
-
-## Contribution
-
-
-
-## Tests
+[Video-Walkthrough](https://drive.google.com/file/d/1oz4QQT2igekhyZdzrSbWtBR7JpyN3JZ5/view)
 
 
 
@@ -49,7 +41,7 @@ n/a
 ## License
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) [2022] [Parker McKillop]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
