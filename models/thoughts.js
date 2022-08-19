@@ -1,18 +1,18 @@
 const mongoose = require('mongoose');
 
-const reaction = new mongoose.Schema({
+const reactionSchema = new mongoose.Schema({
     reactionId: {
         type: mongoose.Types.ObjectId, 
         default: mongoose.Types.ObjectId
     },
 
     reactionBody:{
-        type: string,
+        type: String,
         minLength: 1,
         maxLength: 280
     },
 
-    userName:{
+    username:{
         type: String,
         required: true
     },
@@ -36,15 +36,24 @@ const thoughtSchema = new mongoose.Schema({
         default: Date.now,
     },
 
-    userName:{
+    username:{
         type: String,
         required: true,
     },
 
-    reactions:[reaction]
+    reactions:[reactionSchema]
 
 })
 
-const Thought = mongoose.model('Thought', thoughtSchema);
 
-module.exports = Thought
+    
+
+const Thought = mongoose.model('thought', thoughtSchema);
+
+
+thoughtSchema.virtual("reactionCount")
+    .get(function(){
+        return this.reactions.length
+    })
+
+module.exports = Thought 

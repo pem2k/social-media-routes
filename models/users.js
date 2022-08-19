@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 
 const userSchema = new mongoose.Schema({
-    Username: { 
+    username: { 
         type: String, 
         unique: true, 
         required: true, 
@@ -19,14 +19,13 @@ const userSchema = new mongoose.Schema({
 
     thoughts:[
         {
-            type: Schema.Types.ObjectId,
-            ref: 'thoughtText'
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'thought'
         }],
 
-    friends:[
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'username'
+    friends:[{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'user'
         }]
 },
 {
@@ -36,14 +35,14 @@ const userSchema = new mongoose.Schema({
     id: false,
   })
 
-userSchema
-  .virtual('FriendListLength')
-  // Getter
+userSchema.virtual('FriendListLength')
   .get(function () {
     return this.friends.length;
   })
 
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('user', userSchema);
+
+
 
 module.exports = User
