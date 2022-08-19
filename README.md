@@ -10,9 +10,6 @@ This social media api was built as an excercies in mongodb with the mongoose odm
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
-- [Contribution](#contribution)
-- [Tests](#tests)
 - [Questions](#questions)
 - [License](#license)
 
